@@ -8,7 +8,7 @@ if (count($_FILES['files']['name'])>0) {
     for ($i=0;$i<count($_FILES['files']['name']);$i++) {
         echo '$i = '.$i;
         //
-        if(($_FILES['files']['type'][$i] == 'image/jpeg') || ($_FILES['files']['type'][$i] == 'image/jpg') || ($_FILES['files']['type'][$i] == 'image/png'))
+        if(($_FILES['files']['type'][$i] == 'image/gif') || ($_FILES['files']['type'][$i] == 'image/jpg') || ($_FILES['files']['type'][$i] == 'image/png'))
         {
            echo ' .ok type correct';
            if(($_FILES['files']['size'][$i]) <= 1048576)
@@ -32,7 +32,7 @@ if (count($_FILES['files']['name'])>0) {
         }
         else
         {
-           echo ' . type non png ,jpg ou jpeg';
+           echo ' . type non png ,jpg ou gif';
            die();
         }
 
